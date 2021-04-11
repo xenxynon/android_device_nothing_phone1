@@ -25,4 +25,7 @@
     <!-- Display color inversion availability -->
     <bool name="config_displayInversionAvailable">false</bool>
 
+    <!-- True if home app should be pinned via Pinner Service -->
+    <bool name="config_pinnerHomeApp">false</bool>
+
 </resources>
