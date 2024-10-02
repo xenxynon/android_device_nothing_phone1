@@ -169,7 +169,8 @@ PRODUCT_PACKAGES += \
     Phone1Nfc \
     Phone1Settings \
     Phone1SystemUI \
-    Phone1SystemUIAOSPA
+    Phone1SystemUIAOSPA \
+    NavigationBarMode2ButtonOverlay
 
 # Paranoid Glyph
 PRODUCT_PACKAGES += \
