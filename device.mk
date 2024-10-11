@@ -88,7 +88,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.drm@1.4-service.clearkey \
-    libcrypto-v33
+    libcrypto_shim
 
 # EGL - Blobcache configuration
 PRODUCT_VENDOR_PROPERTIES += \
