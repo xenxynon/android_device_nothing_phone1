@@ -11,6 +11,10 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := lahaina
+
 # AVB - Disable Verification
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
