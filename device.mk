@@ -221,6 +221,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.2.vendor
+
 # Powershare
 PRODUCT_PACKAGES += \
     vendor.aospa.powershare-service
