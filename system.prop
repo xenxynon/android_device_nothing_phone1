@@ -2,6 +2,16 @@
 persist.vendor.bluetooth.modem_nv_support=true
 persist.vendor.btstack.enable.gatt_robust_caching=false
 
+# Dexopt
+pm.dexopt.first-boot=everything-profile
+pm.dexopt.first-use=everything-profile
+pm.dexopt.bg-dexopt=everything
+pm.dexopt.secondary=everything
+pm.dexopt.install=everything-profile
+pm.dexopt.install-bulk=everything-profile
+pm.dexopt.ab-ota=everything-profile
+pm.dexopt.shared=everything
+
 # Display
 persist.sys.brightness.low.gamma=true
 

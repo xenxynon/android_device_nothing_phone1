@@ -63,6 +63,21 @@ PRODUCT_PACKAGES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Dex-opt
+ART_BUILD_TARGET_NDEBUG := true
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_NDEBUG := true
+ART_BUILD_HOST_DEBUG := false
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := everything
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+ifeq ($(WITH_GMS),false)
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+DONT_DEXPREOPT_PREBUILTS := false
+else
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything-profile
+DONT_DEXPREOPT_PREBUILTS := true
+endif
+
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/displayconfig/display_id_4630946480328692354.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946480328692354.xml
