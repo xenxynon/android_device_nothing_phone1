@@ -53,7 +53,6 @@ debug.renderengine.backend=skiaglthreaded
 debug.sf.disable_backpressure=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.latch_unsignaled=1
-debug.sf.auto_latch_unsignaled=true
 ebug.sf.enable_gl_backpressure=0
 persist.sys.sf.native_mode=260
 ro.surface_flinger.set_idle_timer_ms=4000
