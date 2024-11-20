@@ -85,6 +85,9 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/displayconfig/display_id_4630946480328692354.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946480328692354.xml
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_gl_backpressure=0
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
