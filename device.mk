@@ -64,6 +64,8 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Dex-opt
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 ART_BUILD_TARGET_NDEBUG := false
 ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := false
