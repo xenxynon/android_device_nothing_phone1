@@ -29,6 +29,12 @@ vendor.qc2.use.bqpool=1
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 
+# Dex2oat
+dalvik.vm.dex2oat-cpu-set=4,5,6,7
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
+dalvik.vm.image-dex2oat-threads=4
+
 # Display
 debug.cpurend.vsync=false
 debug.renderengine.backend=skiaglthreaded
