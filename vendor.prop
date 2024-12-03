@@ -65,6 +65,9 @@ persist.vendor.sensors.sync_request=true
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.on_change_sample_period=true
 
+# set threshold to filter unused apps
+pm.dexopt.downgrade_after_inactive_days=10
+
 # SOC manufacturer
 ro.soc.manufacturer=QTI
 
