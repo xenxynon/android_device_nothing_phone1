@@ -25,6 +25,9 @@
     -->
     <integer name="config_udfps_hbm_type">0</integer>
 
+    <!-- Udfps vendor code -->
+    <integer name="config_udfps_vendor_code">22</integer>
+
     <!-- Doze: does the single tap sensor need a proximity check? -->
     <bool name="doze_single_tap_proximity_check">true</bool>
 
