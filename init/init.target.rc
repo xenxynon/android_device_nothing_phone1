@@ -435,13 +435,6 @@ service vendor.ssc_drva_test.accel /vendor/bin/ssc_drva_test -sensor=accel -fact
    disabled
    oneshot
 
-
-service adsprpcd /vendor/bin/adsprpcd
-   class main
-   user media
-   group media
-   disabled
-
 service vendor.ssc_drva_test.gyro /vendor/bin/ssc_drva_test -sensor=gyro -factory_test=2 -duration=3
    class core
    user system
