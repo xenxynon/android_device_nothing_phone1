@@ -68,7 +68,9 @@ BOARD_KERNEL_CMDLINE := \
     cgroup.memory=nokmem,nosocket \
     pcie_ports=compat \
     iptable_raw.raw_before_defrag=1 \
-    ip6table_raw.raw_before_defrag=1
+    ip6table_raw.raw_before_defrag=1 \
+    androidboot.selinux=permissive
+
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_RAMDISK_USE_LZ4 := true
 KERNEL_DEFCONFIG := vendor/lahaina-qgki_defconfig
