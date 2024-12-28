@@ -71,8 +71,8 @@ BOARD_KERNEL_CMDLINE := \
     ip6table_raw.raw_before_defrag=1
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_RAMDISK_USE_LZ4 := true
-KERNEL_DEFCONFIG := phone1_defconfig
-KERNEL_FULL_LLVM := true
+KERNEL_DEFCONFIG := vendor/lahaina-qgki_defconfig
+#KERNEL_FULL_LLVM := true
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := Spacewar|spacewar
