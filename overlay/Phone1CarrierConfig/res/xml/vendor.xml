@@ -3545,6 +3545,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="enableSMSDeliveryReports" value="true" />
         <boolean name="smsEncodingChangeable" value="true" />
         <boolean name="enableMultipartSMS" value="true" />
+        <boolean name="carrier_vt_available_bool" value="false" />
         <int name="smsToMmsTextThreshold" value="3" />
         <int name="carrier_default_wfc_ims_roaming_mode_int" value="1" />
         <string name="default_vm_number_string">+420603123311</string>
@@ -3948,6 +3949,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <int name="call_barring_default_service_class_int" value="0" />
         <boolean name="carrier_vt_available_bool" value="false" />
         <boolean name="vonr_enabled_bool" value="true" />
+        <boolean name="nt_verify_cnap_name_display_bool" value="true" />
         <string-array name="nt_force_play_ringback_tone_string_array" num="1">
             <item value="8002844" />
         </string-array>
@@ -4312,6 +4314,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     <carrier_config cid="1413" name="Sunrise">
         <string name="vvm_type_string">vvm_type_omtp</string>
         <boolean name="carrier_vt_available_bool" value="false" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="1" />
     </carrier_config>
     <carrier_config cid="1414" name="Salt">
         <int name="smsToMmsTextThreshold" value="6" />
@@ -4623,6 +4627,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     <carrier_config cid="1628" name="Maxis/Hotlink">
         <boolean name="nt_carrier_default_sa_enabled_bool" value="true" />
         <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <boolean name="vonr_enabled_bool" value="true" />
+        <boolean name="vonr_on_by_default_bool" value="true" />
     </carrier_config>
     <carrier_config cid="1630" name="Digi">
         <boolean name="nt_carrier_default_sa_enabled_bool" value="true" />
@@ -4675,7 +4681,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     </carrier_config>
     <carrier_config cid="1670" name="MEO">
         <string name="default_vm_number_string">200</string>
-        <boolean name="carrier_wfc_ims_available_bool" value="false" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
     <carrier_config cid="1675" name="Ooredoo">
         <int name="call_barring_default_service_class_int" value="0" />
@@ -5309,6 +5315,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="enableSMSDeliveryReports" value="true" />
         <boolean name="smsEncodingChangeable" value="true" />
         <boolean name="enableMultipartSMS" value="true" />
+        <boolean name="carrier_vt_available_bool" value="false" />
         <int name="smsToMmsTextThreshold" value="3" />
         <int name="carrier_default_wfc_ims_roaming_mode_int" value="1" />
         <string name="default_vm_number_string">+420603123311</string>
@@ -5427,6 +5434,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="call_forwarding_visibility_bool" value="false" />
         <boolean name="carrier_wfc_ims_available_bool" value="false" />
         <boolean name="hide_enhanced_4g_lte_bool" value="true" />
+        <boolean name="nt_jp_5g_display_rule_bool" value="true" />
+        <boolean name="nt_carrier_nsa_cell_cache_bool" value="false" />
     </carrier_config>
     <carrier_config cid="2434" name="giga_sg">
         <boolean name="hide_ims_apn_bool" value="true" />
