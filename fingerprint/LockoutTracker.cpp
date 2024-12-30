@@ -4,10 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include "Fingerprint.h"
 #include "LockoutTracker.h"
 
 #include <util/Util.h>
+
+#include "Fingerprint.h"
 
 namespace aidl {
 namespace android {
@@ -16,44 +17,44 @@ namespace biometrics {
 namespace fingerprint {
 
 void LockoutTracker::reset(bool clearAttemptCounter) {
-    if (clearAttemptCounter)
-        mFailedCount = 0;
-    mLockoutTimedStart = 0;
-    mCurrentMode = LockoutMode::NONE;
+  if (clearAttemptCounter)
+    mFailedCount = 0;
+  mLockoutTimedStart = 0;
+  mCurrentMode = LockoutMode::NONE;
 }
 
 void LockoutTracker::addFailedAttempt() {
-    mFailedCount++;
+  mFailedCount++;
 
-    if (mFailedCount >= LOCKOUT_PERMANENT_THRESHOLD)
-        mCurrentMode = LockoutMode::PERMANENT;
-    else if (mFailedCount >= LOCKOUT_TIMED_THRESHOLD) {
-        mCurrentMode = LockoutMode::TIMED;
-        mLockoutTimedStart = Util::getSystemNanoTime();
-    }
+  if (mFailedCount >= LOCKOUT_PERMANENT_THRESHOLD)
+    mCurrentMode = LockoutMode::PERMANENT;
+  else if (mFailedCount >= LOCKOUT_TIMED_THRESHOLD) {
+    mCurrentMode = LockoutMode::TIMED;
+    mLockoutTimedStart = Util::getSystemNanoTime();
+  }
 }
 
 LockoutMode LockoutTracker::getMode() {
-    if (mCurrentMode == LockoutMode::TIMED) {
-        if (Util::hasElapsed(mLockoutTimedStart, LOCKOUT_TIMED_DURATION)) {
-            mCurrentMode = LockoutMode::NONE;
-            mLockoutTimedStart = 0;
-        }
+  if (mCurrentMode == LockoutMode::TIMED) {
+    if (Util::hasElapsed(mLockoutTimedStart, LOCKOUT_TIMED_DURATION)) {
+      mCurrentMode = LockoutMode::NONE;
+      mLockoutTimedStart = 0;
     }
+  }
 
-    return mCurrentMode;
+  return mCurrentMode;
 }
 
 int64_t LockoutTracker::getLockoutTimeLeft() {
-    int64_t res = 0;
+  int64_t res = 0;
 
-    if (mLockoutTimedStart > 0) {
-        auto now = Util::getSystemNanoTime();
-        auto elapsed = (now - mLockoutTimedStart) / 1000000LL;
-        res = LOCKOUT_TIMED_DURATION - elapsed;
-    }
+  if (mLockoutTimedStart > 0) {
+    auto now = Util::getSystemNanoTime();
+    auto elapsed = (now - mLockoutTimedStart) / 1000000LL;
+    res = LOCKOUT_TIMED_DURATION - elapsed;
+  }
 
-    return res;
+  return res;
 }
 
 } // namespace fingerprint

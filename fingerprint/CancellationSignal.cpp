@@ -12,13 +12,9 @@ namespace hardware {
 namespace biometrics {
 namespace fingerprint {
 
-CancellationSignal::CancellationSignal(Session* session)
-    : mSession(session) {
-}
+CancellationSignal::CancellationSignal(Session *session) : mSession(session) {}
 
-ndk::ScopedAStatus CancellationSignal::cancel() {
-    return mSession->cancel();
-}
+ndk::ScopedAStatus CancellationSignal::cancel() { return mSession->cancel(); }
 
 } // namespace fingerprint
 } // namespace biometrics

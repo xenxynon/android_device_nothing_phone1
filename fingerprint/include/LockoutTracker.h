@@ -16,23 +16,19 @@ namespace fingerprint {
 #define LOCKOUT_TIMED_DURATION 30 * 1000
 #define LOCKOUT_PERMANENT_THRESHOLD 20
 
-enum class LockoutMode {
-    NONE,
-    TIMED,
-    PERMANENT
-};
+enum class LockoutMode { NONE, TIMED, PERMANENT };
 
 class LockoutTracker {
 public:
-    void reset(bool clearAttemptCounter);
-    LockoutMode getMode();
-    void addFailedAttempt();
-    int64_t getLockoutTimeLeft();
+  void reset(bool clearAttemptCounter);
+  LockoutMode getMode();
+  void addFailedAttempt();
+  int64_t getLockoutTimeLeft();
 
 private:
-    int32_t mFailedCount = 0;
-    int64_t mLockoutTimedStart;
-    LockoutMode mCurrentMode;
+  int32_t mFailedCount = 0;
+  int64_t mLockoutTimedStart;
+  LockoutMode mCurrentMode;
 };
 
 } // namespace fingerprint
