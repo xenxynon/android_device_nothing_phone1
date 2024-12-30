@@ -54,6 +54,8 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Fingerprint
 vendor.goodix.locked=0
+ro.vendor.fingerprint.type=udfps_optical
+ro.vendor.fingerprint.sensor_location=540|2170|98
 
 # Hardware ID
 persist.vendor.fastrpc.hwid_version=PVT

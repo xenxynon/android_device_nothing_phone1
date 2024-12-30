@@ -1,0 +1,4 @@
+service vendor.fingerprint-phone1 /vendor/bin/hw/android.hardware.biometrics.fingerprint-service.phone1
+    class late_start
+    user system
+    group system input uhid
