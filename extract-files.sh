@@ -58,7 +58,7 @@ function blob_fixup() {
     case "${1}" in
         vendor/bin/hw/vendor.qti.hardware.vibrator.service | vendor/lib64/vendor.qti.hardware.vibrator.impl.so)
             [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "android.hardware.vibrator-V1-ndk_platform.so" "android.hardware.vibrator-V2-ndk.so" "${2}"
+            patchelf --replace-needed "android.hardware.vibrator-V1-ndk_platform.so" "android.hardware.vibrator-V2-ndk.so" "${2}"
             ;;
         vendor/etc/media_codecs.xml|vendor/etc/media_codecs_yupik_v0.xml|vendor/etc/media_codecs_yupik_v1.xml)
             [ "$2" = "" ] && return 0
@@ -74,7 +74,7 @@ function blob_fixup() {
             ;;
         vendor/lib64/mediadrm/libwvdrmengine.so|vendor/lib64/libwvhidl.so)
             [ "$2" = "" ] && return 0
-            grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            grep -q "libcrypto_shim.so" "${2}" || patchelf --add-needed "libcrypto_shim.so" "${2}"
             ;;
         *)
             return 1
