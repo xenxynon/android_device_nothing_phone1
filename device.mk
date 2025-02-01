@@ -133,6 +133,7 @@ DEVICE_MANIFEST_FILE += \
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/phone1_vendor_framework_compatibility_matrix.xml
+    vendor/yaap/config/device_framework_matrix.xml
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \

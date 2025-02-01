@@ -71,10 +71,10 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_KERNEL_CONFIG := phone1_defconfig
+TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := Spacewar|spacewar
+TARGET_OTA_ASSERT_DEVICE := Spacewar|spacewar|phone1
 
 # Partitions - A/B
 AB_OTA_PARTITIONS := boot dtbo odm product system system_ext vendor vendor_boot vbmeta vbmeta_system
