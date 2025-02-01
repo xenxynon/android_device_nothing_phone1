@@ -1,5 +1,5 @@
 DEVICE_PATH := device/nothing/phone1
-
+PRODUCT_ENFORCE_PACKAGES_EXIST := true
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
@@ -134,7 +134,7 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/manifest_phone1.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    $(DEVICE_PATH)/phone1_vendor_framework_compatibility_matrix.xml
+    $(DEVICE_PATH)/phone1_vendor_framework_compatibility_matrix.xml \
     vendor/yaap/config/device_framework_matrix.xml
 
 # Namespaces

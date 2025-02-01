@@ -26,9 +26,10 @@ source "${HELPER}"
 
 function vendor_imports() {
     cat <<EOF >>"$1"
-        "hardware/qcom/display",
-        "hardware/qcom/display/gralloc",
-        "hardware/qcom/display/libdebug",
+        "hardware/qcom-caf/sm8350/display",
+        "hardware/qcom-caf/sm8350/display/gralloc",
+        "hardware/qcom-caf/sm8350/display/libdebug",
+        "hardware/qcom-caf/sm8350/display/composer",
         "vendor/qcom/common/vendor/adreno-r",
         "vendor/qcom/common/vendor/display/5.4",
         "vendor/qcom/common/vendor/gps-legacy",

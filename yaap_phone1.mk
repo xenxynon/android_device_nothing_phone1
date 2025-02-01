@@ -25,6 +25,8 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_GMS_CLIENTID_BASE := android-nothing
 
+TARGET_BUILD_GAPPS := true
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=Spacewar \
     BuildDesc="Spacewar-user 12 SKQ1.211230.001 1666412462 release-keys" \
